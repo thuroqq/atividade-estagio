@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="zz.svg" type="image/png" sizes="16x16">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Conversor De Números Romanos</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="conteiner-main">
+  <div class="conteiner1"> 
+  <h1>Conversor de Números Romanos</h1>
+</div>
+
+<div class="inputconteiner"> 
+ <label for="inputValue">Valor:</label>
+ <input type="text" id="inputValue" placeholder="Digite o número romano ou arábico">
+
+ <label for="conversionType">Converter para:</label>
+ <select id="conversionType">
+    <option value="romanToArabic">Romano para Arábico</option>
+    <option value="arabicToRoman">Arábico para Romano</option>
+  </select>
+
+ <button onclick="converter()"> Converter! </button>
+</div>
+
+ <div id="resultBox"></div>
+
+ <script src="conversor.js"></script>
+
+</div>
+</body>
+</html>
