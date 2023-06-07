@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="calculadora.png"  > 
+    <link rel="stylesheet" href="divisor_conta.css">
+    <script src="divisor_conta.js"></script>
+    <title>Divisor de Conta de Restaurante</title>
+</head>
+<body>
+    <h1>Divisor de Conta de Restaurante</h1>
+
+    <form id="formulario">
+        <label for="numClientes">Número de Clientes:</label>
+        <input type="number" id="numClientes" min="1"><br><br>
+
+        <div id="produtos">
+            <h3>Produtos Consumidos:</h3>
+            <div class="produto">
+                <input type="text" class="nomeProduto" placeholder="Nome do Produto">
+                <input type="number" class="valorProduto" min="0" step="0.01" placeholder="Valor do Produto">
+                <button type="button" onclick="removerProduto(this.parentNode)">Remover</button>
+            </div>
+        </div>
+
+        <button type="button" onclick="adicionarProduto()">Adicionar Produto</button><br><br>
+
+        <label for="incluirTaxa">Incluir 10% de taxa de serviço:</label>
+        <input type="checkbox" id="incluirTaxa" checked><br><br>
+
+        <button type="button" onclick="calcularConta()">Calcular Conta</button><br><br>
+
+        <div id="resultado" style="display: none;">
+            <h3>Resultado:</h3>
+            <div id="contas"></div>
+        </div>
+    </form>
+</body>
+</html>
